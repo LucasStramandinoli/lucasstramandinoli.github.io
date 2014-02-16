@@ -8,11 +8,13 @@ and open the template in the editor.
     <!-- ng-app="phonecatApp"  -->
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="app/js/tabelaController.js"></script>
         <script src="app/js/NomesController.js"></script>
+        <script src="app/js/TableResize.js"></script>
         <link rel="stylesheet" href="css/bootstrap.css">
-
-
+        <link rel="stylesheet" href="css/BlackBoardtable.css" type="text/css"/>
         <title>TODO supply a title</title>
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width">
@@ -23,23 +25,19 @@ and open the template in the editor.
         meu nome {{item.name}}
         <br>
         <button ng-click="AddNome()">Add Name</button>
-
-        <!-- <div>
-             <ul>
-                 <li ng-repeat="nome in nomes">
-                     {{nome.name}}
-                     {{nome.sobrenome}}
-                 </li>
-             </ul>
-             
-         </div>  -->
+        <br>
+        <!--<input id="addcol" type="button" value="Add Column" />-->
+        <br>
+        <br>
         <div>
-            <table class="table">
+            <table class="BlackBoard" border="1">
                 <thead>
-                    <tr ng-repeat="nome in nomes">
-                        <td> {{nome.name}} </td>
-                        <td>{{nome.sobrenome}} </td>
-                    </tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <tr ng-repeat="nome in nomes">
+                    <td>{{nome.name}}</td>
+                    <td>{{nome.sobrenome}} </td>
+                </tr>
                 </thead>
             </table>
         </div>

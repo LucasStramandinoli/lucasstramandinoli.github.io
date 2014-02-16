@@ -6,17 +6,17 @@
 
 var NomesApp = angular.module('NomesApp', []);
 
-NomesApp.controller('NomesListCtrl',function ($scope){
-    
-   $scope.nomes = [
-       {'name':'Lucas','sobrenome':'Stramandinoli'},
-       {'name':'Junior','sobrenome':'Soares'}
-   ];
-   
-   $scope.AddNome = function (){
-     $scope.nomes.push(
-             {name:$scope.item.name,sobrenome:$scope.item.name}
-               );
-   };
-   
+NomesApp.controller('NomesListCtrl', function($scope) {
+
+    $scope.nomes = [
+        {'name': 'Lucas', 'sobrenome': 'Stramandinoli'},
+        {'name': 'Junior', 'sobrenome': 'Soares'}
+    ];
+
+    $scope.AddNome = function() {
+        $scope.nomes.push(
+                {name: $scope.item.name, sobrenome: $scope.item.name}
+        );
+    };
+
 });
